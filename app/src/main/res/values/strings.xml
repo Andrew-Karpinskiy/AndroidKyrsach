@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kyrsach</string>
+    <string name="currencyTab_name">Валюти</string>
+    <string name="converterTab_name">Конвертер</string>
+</resources>
