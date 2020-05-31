@@ -28,21 +28,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="128dp" />
+                app:layout_constraintGuide_begin="121dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="12dp" />
+                app:layout_constraintGuide_begin="6dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="107dp" />
+                app:layout_constraintGuide_end="74dp" />
 
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text="USD"
                 android:textColor="@color/colorAppText"
-                android:textSize="36sp"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="Долар США"
                 android:textColor="@color/colorAppText"
-                android:textSize="21sp"
+                android:textSize="17sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="27.373"
                 android:textColor="@color/colorAppText"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="@+id/currencySymbol"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -89,15 +89,15 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
                 android:tint="@color/colorAppText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333"
+                app:layout_constraintVertical_bias="0.26999998"
                 app:srcCompat="@android:drawable/ic_popup_sync" />
 
 

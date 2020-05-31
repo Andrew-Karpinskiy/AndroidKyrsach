@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="113dp"
         app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/colorBackground">
 
             <androidx.constraintlayout.widget.Guideline
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="128dp" />
+                app:layout_constraintGuide_begin="176dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="107dp" />
+                app:layout_constraintGuide_end="196dp" />
 
 
             <TextView
@@ -51,53 +51,53 @@
                 android:layout_height="wrap_content"
                 android:text="USD"
                 android:textColor="@color/colorAppText"
-                android:textSize="36sp"
+                android:textSize="46sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.064" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/currencyName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Долар США"
+                android:text="СПЗ (спеціальні права запозичення)"
                 android:textColor="@color/colorAppText"
-                android:textSize="21sp"
+                android:textSize="31sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/currencySymbol"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.36" />
 
             <TextView
                 android:id="@+id/currencyPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27.373"
+                android:text="53056.373"
                 android:textColor="@color/colorAppText"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 app:layout_constraintBottom_toBottomOf="@+id/currencySymbol"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="63dp"
+                android:layout_height="54dp"
                 android:tint="@color/colorAppText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.684"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333"
+                app:layout_constraintVertical_bias="0.118"
                 app:srcCompat="@android:drawable/ic_popup_sync" />
 
 

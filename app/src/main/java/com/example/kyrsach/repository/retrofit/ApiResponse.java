@@ -1,4 +1,4 @@
-package com.example.kyrsach.retrofit;
+package com.example.kyrsach.repository.retrofit;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

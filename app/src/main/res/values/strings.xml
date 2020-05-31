@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Kyrsach</string>
+    <string name="app_name">Exchange rates</string>
     <string name="currencyTab_name">Валюти</string>
-    <string name="converterTab_name">Конвертер</string>
+    <string name="title_name">Конвертер</string>
+    <string name="giveAwayUah_label">Віддаєте UAH</string>
+    <string name="receiveUah_label">Отримаєте UAH</string>
+    <string name="exit">Натисніть ще раз, щоб вийти</string>
+    <string name="retrofit_message">Помилка при отриманні даних!</string>
 </resources>

@@ -1,31 +1,31 @@
 package com.example.kyrsach.adapter;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.kyrsach.retrofit.ApiResponse;
+import com.example.kyrsach.ConverterActivity;
 import com.example.kyrsach.R;
+import com.example.kyrsach.repository.retrofit.ApiResponse;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.CurrencyViewHolder>{
 
     //Здесь хранятся объекты с информацией о валютах
     private  List<ApiResponse> data;
-    //Для открытия нового окна по нажатию кнопки
-    private Context context;
 
-    public RecyclerViewAdapter(List<ApiResponse> data, Context context) {
+    public RecyclerViewAdapter(List<ApiResponse> data) {
         this.data = data;
-        this.context = context;
     }
 
     //Передаем новые данные и уведомляем адаптер о том что данные были изменены
-    public void updateCurrencyList(List<ApiResponse> movieList) {
-        this.data = movieList;
+    public void updateCurrencyList(List<ApiResponse> list) {
+        this.data = list;
         notifyDataSetChanged();
     }
 
@@ -38,11 +38,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return new CurrencyViewHolder(v);
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull CurrencyViewHolder currencyViewHolder, int i) {
         //Заполнение элементов view данными из списка обьектов
         currencyViewHolder.currencyName.setText(data.get(i).getCurrencyName());
-        currencyViewHolder.currencyPrice.setText(""+data.get(i).getCurrencyPrice());
+        currencyViewHolder.currencyPrice.setText(String.format("%.3f", data.get(i).getCurrencyPrice()));
         currencyViewHolder.currencySymbol.setText(data.get(i).getCurrencySymbol());
     }
 
@@ -56,11 +57,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView currencyName;
         TextView currencyPrice;
         TextView currencySymbol;
+        CardView cardView;
         CurrencyViewHolder(@NonNull View itemView) {
             super(itemView);
             currencyName = itemView.findViewById(R.id.currencyName);
             currencyPrice= itemView.findViewById(R.id.currencyPrice);
             currencySymbol = itemView.findViewById(R.id.currencySymbol);
+            cardView = itemView.findViewById(R.id.cardView);
+            // По нажатию на элемент списка откроеться активити с конвертером
+            cardView.setOnClickListener((View v) -> {
+                Intent intent = new Intent(itemView.getContext(), ConverterActivity.class);
+                intent.putExtra("symbol",currencySymbol.getText());
+                itemView.getContext().startActivity(intent);
+            });
         }
     }
 }
